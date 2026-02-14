@@ -1,0 +1,22 @@
+---
+title: Get Player Coordinates
+description: Getting player coordinates
+---
+
+```sc
+SCRIPT_START
+
+{
+  NOP 
+
+  LVAR_INT player_char
+  LVAR_FLOAT player_x, player_y, player_z
+
+  WAIT 0
+  GET_PLAYER_CHAR 0 player_char
+  GET_CHAR_COORDINATES player_char, player_x, player_y, player_z
+  PRINT_FORMATTED "X: %.2f Y: %.2f Z: %.2f", 1000, player_x, player_y, player_z
+}
+
+SCRIPT_END
+```

@@ -1,0 +1,23 @@
+---
+title: Check Player Interior
+description: Checks if the player is outside or not, and if not, where.
+---
+
+To check if the player is inside of a safehouse, store of other type of interior building (where the loading screens appears when the player enters the place), you can use:
+
+
+### GET_CHAR_AREA_VISIBLE
+
+It gets the `INTERIOR_ID` of the place the player is at and stores it inside of the `INTERIOR_ID_HANDLE` var. This one is useful if you want to load something before the **player character** is actually outside. It runs as soon as the player hits the yellow marker to get in or out of an interior.
+
+```sc
+GET_AREA_VISIBLE <PLAYER_CHAR> <INTERIOR_ID_HANDLE>
+```
+
+### GET_CHAR_AREA_VISIBLE
+
+But this one loads as soon as the player is already outside, good for code that uses coordinates.
+
+```sc
+GET_CHAR_AREA_VISIBLE <PLAYER_CHAR> <INTERIOR_ID_HANDLE>
+```

@@ -1,0 +1,28 @@
+---
+title: Spawning Characters
+---
+
+```sc
+SCRIPT_START
+{
+  NOP
+
+  LVAR_INT drug_dealer_char
+
+  WAIT 0
+
+  // Wait until the character model is loaded
+  REQUEST_MODEL WMYDRUG
+  WHILE NOT HAS_MODEL_LOADED WMYDRUG
+    WAIT 0
+  ENDWHILE
+
+  // Spawns the model at the specified coordinates
+  CREATE_CHAR PEDTYPE_DEALER WMYDRUG 2490.17 -1646.55 14.08 drug_dealer_char
+  SET_CHAR_HEADING drug_dealer_char 90.0
+
+  // Lets the program unload the model when not required anymore, freeing up memory
+  MARK_MODEL_AS_NO_LONGER_NEEDED WMYDRUG
+}
+SCRIPT_END
+```
