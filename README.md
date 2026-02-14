@@ -1,45 +1,58 @@
-# gta-sa-modding
+# GTA SA Modding Documentation
 
-This is a Next.js application generated with
-[Create Fumadocs](https://github.com/fuma-nama/fumadocs).
+A personal note-taking documentation project for **GTA San Andreas modding**, focusing on **GTA3Script** and **CLEO mods**.
 
-Run development server:
+## Purpose
+
+This project serves as a central repository for notes, snippets, and guides related to modding Grand Theft Auto: San Andreas. It covers:
+- **GTA3Script**: The language used for mission and script coding in GTA SA.
+- **CLEO Mods**: Creating and managing custom scripts that extend the game's functionality.
+- **General Modding**: Documentation on props, spawning, and game mechanics.
+
+The contents might be incomplete, lacking some information, as the project is acting more like a knowledge base than a full documentation with guides and API references.
+
+## Tech Stack
+
+This documentation site is built with modern web technologies:
+- **[Next.js](https://nextjs.org/)**: React framework for building the application.
+- **[Fumadocs](https://fumadocs.dev/)**: Powerful documentation framework for Next.js.
+- **[Tailwind CSS](https://tailwindcss.com/)**: Utility-first CSS framework for styling.
+- **[Shiki](https://shiki.style/)**: High-speed syntax highlighter (configured in `source.config.ts`).
+
+## Getting Started
+
+### Prerequisites
+
+Ensure you have [Node.js](https://nodejs.org/) and [pnpm](https://pnpm.io/) installed.
+
+### Installation
 
 ```bash
-npm run dev
-# or
-pnpm dev
-# or
-yarn dev
+pnpm install
 ```
 
-Open http://localhost:3000 with your browser to see the result.
+### Development
 
-## Explore
+Run the development server:
 
-In the project, you can see:
+```bash
+pnpm dev
+```
 
-- `lib/source.ts`: Code for content source adapter, [`loader()`](https://fumadocs.dev/docs/headless/source-api) provides the interface to access your content.
-- `lib/layout.shared.tsx`: Shared options for layouts, optional but preferred to keep.
+The site will be available at [http://localhost:3000](http://localhost:3000).
 
-| Route                     | Description                                            |
-| ------------------------- | ------------------------------------------------------ |
-| `app/(home)`              | The route group for your landing page and other pages. |
-| `app/docs`                | The documentation layout and pages.                    |
-| `app/api/search/route.ts` | The Route Handler for search.                          |
+### Build
 
-### Fumadocs MDX
+Build the production application:
 
-A `source.config.ts` config file has been included, you can customise different options like frontmatter schema.
+```bash
+pnpm build
+```
 
-Read the [Introduction](https://fumadocs.dev/docs/mdx) for further details.
+## Related Context
 
-## Learn More
+### GTA3Script
+GTA3Script is the original scripting language used by Rockstar North to create game logic for the 3D era GTA games. This project documents common commands, patterns, and best practices.
 
-To learn more about Next.js and Fumadocs, take a look at the following
-resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js
-  features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [Fumadocs](https://fumadocs.dev) - learn about Fumadocs
+### CLEO
+CLEO is a popular plugin for GTA San Andreas that allows the execution of custom scripts (`.cs` files) without modifying the main game script (`main.scm`). It's the standard for modern script modding.
